@@ -15,8 +15,9 @@ import {
 // react-navigation
 import { StackNavigator } from 'react-navigation'
 
+import TabBars from './tabbar'
 const HomeScreen = ({ navigation }) => (
-  <Text onPress={() => { navigation.navigate('Detail') }}>Home</Text>
+  <TabBars></TabBars>
 )
 
 const DetailScreen = ({navigation}) => (
@@ -26,13 +27,13 @@ const RootNavigator = StackNavigator({
   Home: {
     screen: HomeScreen,
     navigationOptions: {
-      headerTitle: 'Home',
+      headerTitle: 'Home2',
       headerTitleStyle: {
         color: 'red',
         textDecorationLine: 'underline'
       },
       headerTintColor: 'yellow',
-      headerLeft: <Text onPress={() => { alert(1) }}>左边按钮</Text>,
+      headerLeft: <Text onPress={() => { 1}}>左边按钮</Text>,
       headerBackTitle: 'pop',
       headerStyle: {
         backgroundColor: 'yellow',
